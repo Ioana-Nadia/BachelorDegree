@@ -1,0 +1,104 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "tourist in brasov",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "RegisterNameIntent",
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.DE_FIRST_NAME",
+              "samples": [
+                "{name}",
+                "My name is {name} ",
+                "{name} is my name",
+                "My first name is {name}",
+                "{name} is my first name"
+              ]
+            }
+          ],
+          "samples": [
+            "{name} is my first name",
+            "{name} is my  name",
+            "My name is {name}",
+            "My first name is {name}",
+            "{name}"
+          ]
+        },
+        {
+          "name": "VisitCityIntent",
+          "slots": [],
+          "samples": [
+            "I\u0027m hungry"
+          ]
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "RegisterNameIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.264384300248"
+          },
+          "slots": [
+            {
+              "name": "name",
+              "type": "AMAZON.DE_FIRST_NAME",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.97186845675.1012525732043"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.264384300248",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "So, your name is {name} . Am I right?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.97186845675.1012525732043",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What\u0027s your first name?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "16"
+}
