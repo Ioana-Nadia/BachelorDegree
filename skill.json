@@ -41,6 +41,9 @@
           "keywords": [],
           "name": "Tourist in Brasov",
           "summary": "Sample Short Description"
+        },
+        "fr-FR": {
+          "name": "Tourist in Brasov"
         }
       },
       "testingInstructions": "Sample Testing Instructions."
