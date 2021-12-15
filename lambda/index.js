@@ -92,10 +92,12 @@ const VisitCityIntentHandler = {
         const dataAvailability = firstName && true;
         
         if(dataAvailability) {
-            if(counter > 1)
+            if(counter > 1) {
                 speakOutput += handlerInput.t('WELCOME_BACK_MSG', {name: firstName});
+            }
             else
-                speakOutput += handlerInput.t('POST_REGISTER_MSG');
+                speakOutput += handlerInput.t('POST_REGISTER_MSG', {name: firstName});
+                
         }
         else
             speakOutput += handlerInput.t('MISSING_MSG');
