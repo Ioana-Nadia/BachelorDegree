@@ -33,19 +33,14 @@ const LaunchRequestHandler = {
         const dataAvailability = name && true;
         let outputSpeech = "";
 
-        if (dataAvailability) {
-            
-            // DE MODIFICAT AICI! SPUNE NUMELE INTENT! we can't use intent chaining because the target intent is not dialog based
-            //return SayBirthdayIntentHandler.handle(handlerInput);
+        if (dataAvailability)
             return VisitCityIntentHandler.handle(handlerInput);
-        }
         else {
-        
             outputSpeech += handlerInput.t('WELCOME_MSG') + handlerInput.t('MISSING_MSG');
-            // we use intent chaining to trigger the birthday registration multi-turn
+            // we use intent chaining to trigger the first name registration multi-turn
             return handlerInput.responseBuilder
                 .speak(outputSpeech)
-                // we use intent chaining to trigger the birthday registration multi-turn
+                // we use intent chaining to trigger the first name registration multi-turn
                 .addDelegateDirective({
                     name: 'RegisterNameIntent',
                     confirmationStatus: 'NONE',
@@ -104,6 +99,37 @@ const VisitCityIntentHandler = {
             
         return handlerInput.responseBuilder
             .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const InterestedInFoodIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InterestedInFood';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('FOOD_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const InterestedInPlacesIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InterestedInPlaces';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('PLACES_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
             .getResponse();
     }
 };
@@ -127,11 +153,10 @@ const CancelAndStopIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && (Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.CancelIntent'
-                || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
+            || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
         const speakOutput = handlerInput.t('GOODBYE_MSG');
-
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
@@ -149,7 +174,6 @@ const FallbackIntentHandler = {
     },
     handle(handlerInput) {
         const speakOutput = handlerInput.t('FALLBACK_MSG');
-
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -272,6 +296,8 @@ exports.handler = Alexa.SkillBuilders.custom()
         LaunchRequestHandler,
         RegisterNameIntentHandler,
         VisitCityIntentHandler,
+        InterestedInFoodIntentHandler,
+        InterestedInPlacesIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

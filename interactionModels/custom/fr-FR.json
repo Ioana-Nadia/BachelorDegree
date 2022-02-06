@@ -52,6 +52,38 @@
           "samples": [
             "Quelque chose."
           ]
+        },
+        {
+          "name": "InterestedInPlaces",
+          "slots": [],
+          "samples": [
+            "visitons quelques endroits ensemble",
+            "visitons de beaux endroits ensemble",
+            "visitons de beaux endroits",
+            "je préfère les beaux endroits",
+            "je préfère les endroits",
+            "je voudrais des endroits",
+            "visitons quelques endroits",
+            "beaux endroits",
+            "endroits",
+            "quelques endroits"
+          ]
+        },
+        {
+          "name": "InterestedInFood",
+          "slots": [],
+          "samples": [
+            "je voudrais de la nourriture s\u0027il vous plait",
+            "je voudrais de la nourriture",
+            "nourriture s\u0027il vous plait",
+            "j\u0027aimerais manger quelque chose s\u0027il vous plait",
+            "de la nourriture",
+            "nourriture",
+            "je voudrais manger quelque chose s\u0027il vous plait",
+            "j\u0027aimerais manger quelque chose",
+            "je meurs de faim",
+            "j\u0027ai faim"
+          ]
         }
       ],
       "types": []
@@ -100,5 +132,5 @@
       }
     ]
   },
-  "version": "1"
+  "version": "3"
 }

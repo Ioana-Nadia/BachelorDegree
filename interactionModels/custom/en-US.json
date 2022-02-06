@@ -52,6 +52,40 @@
           "samples": [
             "I\u0027m hungry"
           ]
+        },
+        {
+          "name": "InterestedInFood",
+          "slots": [],
+          "samples": [
+            "I would like some food please",
+            "I would like some food",
+            "some food please.",
+            "food please.",
+            "I would like to eat something please.",
+            "some food.",
+            "food.",
+            "I would like to eat something.",
+            "I am starving.",
+            "I\u0027m starving.",
+            "I am hungry.",
+            "I\u0027m hungry."
+          ]
+        },
+        {
+          "name": "InterestedInPlaces",
+          "slots": [],
+          "samples": [
+            "let\u0027s visit some beautiful places together",
+            "let\u0027s visit some places together",
+            "let\u0027s visit some beautiful places",
+            "I prefer some beautiful places",
+            "I prefer some places",
+            "I would like some beautiful places",
+            "let\u0027s visit some places",
+            "beautiful places",
+            "places",
+            "some places"
+          ]
         }
       ],
       "types": []
@@ -100,5 +134,5 @@
       }
     ]
   },
-  "version": "16"
+  "version": "21"
 }
