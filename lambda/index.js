@@ -53,8 +53,11 @@ const LaunchRequestHandler = {
 
 const RegisterNameIntentHandler = {
     canHandle(handlerInput) {
+        const {attributesManager, requestEnvelope} = handlerInput;
+        const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RegisterNameIntent';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RegisterNameIntent'
+            && firstName;
     },
     handle(handlerInput) {
         const {attributesManager, requestEnvelope} = handlerInput;
@@ -171,6 +174,10 @@ const FallbackIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
+            /**|| (Alexa.getIntentName(handlerInput.requestEnvelope) !== 'RegisterNameIntent'
+                && Alexa.getIntentName(handlerInput.requestEnvelope) !== 'VisitCityIntent'
+                && Alexa.getIntentName(handlerInput.requestEnvelope) !== 'InterestedInFood'
+                && Alexa.getIntentName(handlerInput.requestEnvelope) !== 'InterestedInPlaces');*/
     },
     handle(handlerInput) {
         const speakOutput = handlerInput.t('FALLBACK_MSG');

@@ -21,9 +21,17 @@ module.exports = {
                                     What would you be interested in today? Some food or beautiful places you must see?
                                 </amazon:emotion>`,
             FOOD_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">    
-                                    So, you are hungry
-                                    <audio src="soundbank://soundlibrary/voices/human/human_12"/>
-                                    Ok... Let's see some restaurants! 
+                                    So, you are hungry!
+                                    Ok... Let's see some restaurants!
+                                    <break time="1s"/>
+                                    <audio src="soundbank://soundlibrary/computers/typing/typing_02"/>
+                                    <break time="1s"/>
+                                    I've just found some interesting places to eat!
+                                    <break time="1s"/>
+                                    First of all, I'll let you choose one of the following categories!
+                                    I have for you: International, Romanian, and Mediterranean.
+                                    <break time="500ms"/>
+                                    So, which one would you like to try?
                                 </amazon:emotion>`,
             PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">    
                                     Cool!!! Let's see some amazing places here! 
@@ -65,9 +73,17 @@ module.exports = {
                                     Qu'est-ce qui vous intéresserait aujourd'hui? De la nourriture ou de beaux endroits que vous devez voir?
                                 </amazon:emotion>`,
             FOOD_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    Alors, tu as faim.
-                                    <audio src="soundbank://soundlibrary/voices/human/human_12"/>
-                                    Bien... Voyons quelques restaurants!  
+                                    Alors, tu as faim!
+                                    Bien... Voyons quelques restaurants!
+                                    <break time="1s"/>
+                                    <audio src="soundbank://soundlibrary/computers/typing/typing_02"/>
+                                    <break time="1s"/>
+                                    Je viens de trouver des endroits intéressants pour manger!
+                                    <break time="1s"/>
+                                    Tout d'abord, je vous laisse choisir l'une des catégories suivantes !
+                                    J'ai pour vous : international, roumain et méditerranéen.
+                                    <break time="500ms"/>
+                                    Alors, lequel aimeriez-vous essayer?
                                 </amazon:emotion>`,
             PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">    
                                     Cool!!! Voyons quelques endroits incroyables ici!
@@ -76,7 +92,7 @@ module.exports = {
             MISSING_MSG: `On dirait que tu ne m'as pas encore dit ton prénom. `,
             HELP_MSG: 'Je peux vous aider à vous amuser dans la ville de Brasov. Avez-vous faim ou voulez-vous visiter la ville? ',
             REPROMPT_MSG: `Si vous ne savez pas quoi faire ensuite, essayez de demander de l'aide. `,
-            GOODBYE_MSG: 'Au revoir, {{nom}}! ',
+            GOODBYE_MSG: 'Au revoir, {{name}}! ',
             REFLECTOR_MSG: 'Vous venez de déclencher {{intent}}. ',
             FALLBACK_MSG: `<amazon:emotion name="disappointed" intensity="high">
                                 Désolé, je ne sais pas à ce sujet. Veuillez réessayer.

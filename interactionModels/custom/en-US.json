@@ -30,7 +30,6 @@
               "name": "name",
               "type": "AMAZON.DE_FIRST_NAME",
               "samples": [
-                "{name}",
                 "My name is {name} ",
                 "{name} is my name",
                 "My first name is {name}",
@@ -42,16 +41,13 @@
             "{name} is my first name",
             "{name} is my  name",
             "My name is {name}",
-            "My first name is {name}",
-            "{name}"
+            "My first name is {name}"
           ]
         },
         {
           "name": "VisitCityIntent",
           "slots": [],
-          "samples": [
-            "I\u0027m hungry"
-          ]
+          "samples": []
         },
         {
           "name": "InterestedInFood",
@@ -59,16 +55,16 @@
           "samples": [
             "I would like some food please",
             "I would like some food",
-            "some food please.",
-            "food please.",
-            "I would like to eat something please.",
-            "some food.",
-            "food.",
-            "I would like to eat something.",
-            "I am starving.",
-            "I\u0027m starving.",
-            "I am hungry.",
-            "I\u0027m hungry."
+            "some food please",
+            "food please",
+            "I would like to eat something please",
+            "some food",
+            "food",
+            "I would like to eat something",
+            "I am starving",
+            "I\u0027m starving",
+            "I am hungry",
+            "I\u0027m hungry"
           ]
         },
         {
@@ -88,7 +84,12 @@
           ]
         }
       ],
-      "types": []
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "HIGH"
+        }
+      }
     },
     "dialog": {
       "intents": [
@@ -134,5 +135,5 @@
       }
     ]
   },
-  "version": "21"
+  "version": "26"
 }
