@@ -30,7 +30,6 @@
               "name": "name",
               "type": "AMAZON.FirstName",
               "samples": [
-                "{name}",
                 "Je m\u0027appelle {name} ",
                 "{name} est mon nom",
                 "Mon prénom est {name}",
@@ -39,7 +38,6 @@
             }
           ],
           "samples": [
-            "{name}",
             "Je m\u0027appelle {name} ",
             "{name} est mon nom",
             "Mon prénom est {name}",
@@ -49,9 +47,7 @@
         {
           "name": "VisitCityIntent",
           "slots": [],
-          "samples": [
-            "Quelque chose."
-          ]
+          "samples": []
         },
         {
           "name": "InterestedInPlaces",
@@ -132,5 +128,5 @@
       }
     ]
   },
-  "version": "3"
+  "version": "4"
 }
