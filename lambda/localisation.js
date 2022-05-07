@@ -5,7 +5,7 @@ module.exports = {
             WELCOME_BACK_MSG: `<amazon:emotion name="excited" intensity="medium">
                                     I remember you! Welcome back {{name}}!
                                     <break time="1s"/>
-                                    Let's have another wonderful day together in Brasov! 
+                                    Let's have another wonderful day together in Brasov!
                                     <break time="1s"/>
                                     What would you be interested in today? Some food or beautiful places you must see? 
                                 </amazon:emotion>`,
@@ -26,7 +26,7 @@ module.exports = {
                                     <break time="1s"/>
                                     <audio src="soundbank://soundlibrary/computers/typing/typing_02"/>
                                     <break time="1s"/>
-                                    I've just found some interesting places to eat!
+                                    I've just found some interesting places where you can eat!
                                     <break time="1s"/>
                                     First of all, I'll let you choose one of the following categories!
                                     I have for you: International, Romanian, and Mediterranean.
@@ -36,6 +36,29 @@ module.exports = {
             PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">    
                                     Cool!!! Let's see some amazing places here! 
                                   </amazon:emotion>`,
+            INTERNATIONAL_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                            So, you want international...
+                                            <say-as interpret-as="interjection">hmm</say-as>.
+                                            <break time="1s"/>
+                                            I know some restaurants. Let's see...
+                                            <break time="1s"/>
+                                            I have two with high reviews!
+                                            Monark
+                                            <break time="1s"/>
+                                            , and <lang xml:lang="fr-FR">Le Sommelier</lang> Wine Bar and <lang xml:lang="fr-FR">Brasserie</lang>
+                                            <break time="500ms"/>
+                                            Which one would you like to pick?
+                                         </amazon:emotion>`,
+            MONARK_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    MONARK features a diverse selection of extraordinary cuisine in a modern and expansive restaurant with dramatic massive windows, an ark feel, and touch design.
+                                    The restaurant is located in QOSMO Hotel, on Zaharia Stancu Street number four, and is open daily from 7 AM to 12 AM.
+                                    As a recommendation... for food try Gravlax Salmon with beetroot and goat cheese, and for wine try <lang xml:lang="it-IT">Brunello di Montalcino, Il Poggione, Italia.</lang>
+                                  </amazon:emotion>`,
+            SOMMELIER_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        <lang xml:lang="fr-FR">Le Sommelier</lang> is a friendly and cute place, where people have the opportunity to get to know the wine, to taste as many varieties as possible, from authentic Romanian varieties to exotic varieties.
+                                        The restaurant is located on Diaconu Coresi Street number six, and is open daily from 8 AM to 10 PM.
+                                        As a recommendation... try candied duck leg with stewed cabbage and mashed potatoes with truffles.  
+                                     </amazon:emotion>`,
             REJECTED_MSG: 'No problem. Please say the name again so I can get it right. ',
             MISSING_MSG: `It looks like you haven't told me your first name yet. `,
             HELP_MSG: 'I can help you to have some fun in Brasov city. Are you hungry or do you want to visit the city? ',
@@ -88,6 +111,29 @@ module.exports = {
             PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">    
                                     Cool!!! Voyons quelques endroits incroyables ici!
                                  </amazon:emotion>`,
+            INTERNATIONAL_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                            Alors, tu veux international...
+                                            <say-as interpret-as="interjection">Hmmm</say-as>.
+                                            <break time="1s"/>
+                                            Je connais des restaurants. Voyons voir...
+                                            <break time="1s"/>
+                                            J'ai deux avec de bonnes critiques!
+                                            <lang xml:lang="en-US">Monark</lang>
+                                            <break time="1s"/>
+                                            , and Le Sommelier <lang xml:lang="en-US">Wine Bar and</lang> Brasserie
+                                            <break time="500ms"/>
+                                            Laquelle aimeriez-vous choisir?
+                                         </amazon:emotion>`,
+            MONARK_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    MONARK propose une sélection variée de plats extraordinaires dans un restaurant moderne et vaste avec des fenêtres massives spectaculaires, une sensation d'arche et un design magnifique.
+                                    Le restaurant est situé dans l'hôtel QOSMO, au numéro quatre de la rue Zaharia Stancu, et est ouvert tous les jours de 7AM à 12AM.
+                                    En guise de recommandation... pour la nourriture, essayez le Saumon Gravlax à la betterave et au fromage de chèvre, et pour le vin, essayez <lang xml:lang="it-IT">Brunello di Montalcino, Il Poggione, Italia.</lang>
+                                  </amazon:emotion>`,
+            SOMMELIER_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Le Sommelier est un lieu convivial et chic, où les gens ont la possibilité de faire connaissance avec le vin, de goûter un maximum de variétés, des variétés roumaines authentiques aux variétés exotiques.
+                                        Le restaurant est situé au numéro six de la rue Diaconu Coresi et est ouvert tous les jours de 8h00 à 22h00.
+                                        En guise de recommandation... essayez la cuisse de canard confite avec du chou compoté et de la purée de pommes de terre aux truffes. 
+                                     </amazon:emotion>`,
             REJECTED_MSG: 'Aucun problème. Veuillez répéter le nom pour que je puisse le comprendre correctement. ',
             MISSING_MSG: `On dirait que tu ne m'as pas encore dit ton prénom. `,
             HELP_MSG: 'Je peux vous aider à vous amuser dans la ville de Brasov. Avez-vous faim ou voulez-vous visiter la ville? ',

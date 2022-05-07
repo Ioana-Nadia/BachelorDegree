@@ -57,7 +57,7 @@ const RegisterNameIntentHandler = {
         const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RegisterNameIntent'
-            && firstName;
+            && !firstName;
     },
     handle(handlerInput) {
         const {attributesManager, requestEnvelope} = handlerInput;
@@ -95,7 +95,6 @@ const VisitCityIntentHandler = {
             }
             else
                 speakOutput += handlerInput.t('POST_REGISTER_MSG', {name: firstName});
-                
         }
         else
             speakOutput += handlerInput.t('MISSING_MSG');
@@ -130,6 +129,51 @@ const InterestedInPlacesIntentHandler = {
     handle(handlerInput) {
         let speakOutput = "";
         speakOutput += handlerInput.t('PLACES_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const InternationalFoodIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'InternationalFoodIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('INTERNATIONAL_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const MonarkIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'MonarkIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('MONARK_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const SommelierIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'SommelierIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('SOMMELIER_INTEREST_MSG');
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -174,10 +218,6 @@ const FallbackIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.FallbackIntent';
-            /**|| (Alexa.getIntentName(handlerInput.requestEnvelope) !== 'RegisterNameIntent'
-                && Alexa.getIntentName(handlerInput.requestEnvelope) !== 'VisitCityIntent'
-                && Alexa.getIntentName(handlerInput.requestEnvelope) !== 'InterestedInFood'
-                && Alexa.getIntentName(handlerInput.requestEnvelope) !== 'InterestedInPlaces');*/
     },
     handle(handlerInput) {
         const speakOutput = handlerInput.t('FALLBACK_MSG');
@@ -299,12 +339,15 @@ const LoggingRequestInterceptor = {
  * defined are included below. The order matters - they're processed top to bottom 
  * */
 exports.handler = Alexa.SkillBuilders.custom()
-        .addRequestHandlers(
+    .addRequestHandlers(
         LaunchRequestHandler,
         RegisterNameIntentHandler,
         VisitCityIntentHandler,
         InterestedInFoodIntentHandler,
         InterestedInPlacesIntentHandler,
+        InternationalFoodIntentHandler,
+        MonarkIntentHandler,
+        SommelierIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

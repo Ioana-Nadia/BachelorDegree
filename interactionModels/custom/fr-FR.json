@@ -80,6 +80,59 @@
             "je meurs de faim",
             "j\u0027ai faim"
           ]
+        },
+        {
+          "name": "InternationalFoodIntent",
+          "slots": [],
+          "samples": [
+            "dis m\u0027en plus sur les restaurants internationaux",
+            "dis m\u0027en plus sur l\u0027international",
+            "nourriture internationale",
+            "Je voudrais un restaurant international",
+            "Je voudrais de la nourriture internationale",
+            "Je voudrais l\u0027international",
+            "international"
+          ]
+        },
+        {
+          "name": "MonarkIntent",
+          "slots": [],
+          "samples": [
+            "dis m\u0027en plus sur Monark s\u0027il vous plait",
+            "dis m\u0027en plus sur Monark",
+            "parlons de Monark",
+            "je veux Monark s\u0027il vous plaît",
+            "je veux Monark",
+            "je choisis Monark",
+            "voyons Monark",
+            "parlez-moi de Monark s\u0027il vous plaît",
+            "je voudrais en savoir plus sur Monark s\u0027il vous plaît",
+            "Monark s\u0027il vous plaît",
+            "parlez-moi de Monark",
+            "qu\u0027en est-il de Monark",
+            "j\u0027aimerais en savoir plus sur Monark",
+            "Monark"
+          ]
+        },
+        {
+          "name": "SommelierIntent",
+          "slots": [],
+          "samples": [
+            "dis m\u0027en plus sur Le Sommelier s\u0027il vous plait",
+            "dis m\u0027en plus sur Le Sommelier",
+            "parlons de Le Sommelier",
+            "je veux Le Sommelier s\u0027il vous plaît",
+            "je veux Le Sommelier",
+            "je choisis Le Sommelier",
+            "voyons Le Sommelier",
+            "parlez-moi de Le Sommelier s\u0027il vous plaît",
+            "je voudrais en savoir plus sur Le Sommelier s\u0027il vous plaît",
+            "Le Sommelier s\u0027il vous plaît",
+            "parlez-moi de Le Sommelier",
+            "qu\u0027en est-il de Le Sommelier",
+            "j\u0027aimerais en savoir plus sur Le Sommelier",
+            "Le Sommelier"
+          ]
         }
       ],
       "types": []
@@ -128,5 +181,5 @@
       }
     ]
   },
-  "version": "4"
+  "version": "9"
 }
