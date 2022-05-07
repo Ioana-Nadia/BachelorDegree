@@ -33,7 +33,8 @@
                 "My name is {name} ",
                 "{name} is my name",
                 "My first name is {name}",
-                "{name} is my first name"
+                "{name} is my first name",
+                "My first name is {name}"
               ]
             }
           ],
@@ -81,6 +82,64 @@
             "beautiful places",
             "places",
             "some places"
+          ]
+        },
+        {
+          "name": "InternationalFoodIntent",
+          "slots": [],
+          "samples": [
+            "I would like an international restaurant",
+            "tell me more about international restaurants",
+            "tell me more about international",
+            "international food",
+            "I would like international restaurant",
+            "I would like international food",
+            "I would like international",
+            "international"
+          ]
+        },
+        {
+          "name": "MonarkIntent",
+          "slots": [],
+          "samples": [
+            "I want to Monark please",
+            "I want to Monark",
+            "tell me more about Monark please",
+            "tell me more about Monark",
+            "let\u0027s hear about Monark",
+            "I want Monark please",
+            "I want Monark",
+            "I\u0027m choosing Monark",
+            "let\u0027s see Monark",
+            "tell me about Monark please",
+            "I would like to know more about Monark please",
+            "Monark please",
+            "tell me about Monark",
+            "what about Monark",
+            "I would like to know more about Monark",
+            "Monark"
+          ]
+        },
+        {
+          "name": "SommelierIntent",
+          "slots": [],
+          "samples": [
+            "I want to Le Sommelier please",
+            "I want to Le Sommelier",
+            "tell me more about Le Sommelier please",
+            "tell me more about Le Sommelier",
+            "let\u0027s hear about Le Sommelier",
+            "I want Le Sommelier please",
+            "I want Le Sommelier",
+            "I\u0027m choosing Le Sommelier",
+            "let\u0027s see Le Sommelier",
+            "tell me about Le Sommelier please",
+            "I would like to know more about Le Sommelier please",
+            "le Sommelier please",
+            "tell me about Le Sommelier",
+            "what about Le Sommelier",
+            "I would like to know more about Le Sommelier",
+            "le Sommelier"
           ]
         }
       ],
@@ -135,5 +194,5 @@
       }
     ]
   },
-  "version": "26"
+  "version": "35"
 }
