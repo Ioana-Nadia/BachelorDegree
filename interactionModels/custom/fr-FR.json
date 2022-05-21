@@ -133,6 +133,59 @@
             "j\u0027aimerais en savoir plus sur Le Sommelier",
             "Le Sommelier"
           ]
+        },
+        {
+          "name": "RomanianFoodIntent",
+          "slots": [],
+          "samples": [
+            "roumain",
+            "Je voudrais le roumain",
+            "Je voudrais de la nourriture roumaine",
+            "Je voudrais un restaurant roumain",
+            "nourriture roumaine",
+            "dis m\u0027en plus sur le roumain",
+            "dis m\u0027en plus sur les restaurants roumains"
+          ]
+        },
+        {
+          "name": "OgradaIntent",
+          "slots": [],
+          "samples": [
+            "Ograda",
+            "j\u0027aimerais en savoir plus sur Ograda",
+            "qu\u0027en est-il de Ograda",
+            "parlez-moi de Ograda",
+            "Ograda s\u0027il vous plait",
+            "je voudrais en savoir plus sur Ograda s\u0027il vous plait",
+            "parlez-moi de Ograda s\u0027il vous plait",
+            "voyons Ograda",
+            "je choisis Ograda",
+            "je veux Ograda",
+            "je veux Ograda s\u0027il vous plait",
+            "parlons de Ograda",
+            "dis m\u0027en plus sur Ograda",
+            "dis m\u0027en plus sur Ograda s\u0027il vous plait"
+          ]
+        },
+        {
+          "name": "SergianaIntent",
+          "slots": [],
+          "samples": [
+            "Sergiana",
+            "j\u0027aimerais en savoir plus sur Sergiana",
+            "qu\u0027en est-il de Sergiana",
+            "parlez-moi de Sergiana",
+            "Sergiana s\u0027il vous plait",
+            "je voudrais en savoir plus sur Sergiana s\u0027il vous plait",
+            "parlez-moi de Sergiana s\u0027il vous plait",
+            "voyons Sergiana",
+            "je choisis Sergiana",
+            "je veux Sergiana",
+            "je veux Sergiana s\u0027il vous plait",
+            "parlons de Sergiana",
+            "dis m\u0027en plus sur Sergiana",
+            "dis m\u0027en plus sur Sergiana s\u0027il vous plait"
+          ]
         }
       ],
       "types": []
@@ -181,5 +234,5 @@
       }
     ]
   },
-  "version": "9"
+  "version": "13"
 }

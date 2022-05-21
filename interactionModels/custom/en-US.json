@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "tourist in brasov",
+      "invocationName": "tourist in the city of dracula",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -141,6 +141,64 @@
             "I would like to know more about Le Sommelier",
             "le Sommelier"
           ]
+        },
+        {
+          "name": "RomanianFoodIntent",
+          "slots": [],
+          "samples": [
+            "I would like a romanian restaurant",
+            "tell me more about romanian restaurants",
+            "tell me more about romanian",
+            "romanian food",
+            "I would like romanian restaurant",
+            "I would like romanian food",
+            "I would like romanian",
+            "romanian"
+          ]
+        },
+        {
+          "name": "OgradaIntent",
+          "slots": [],
+          "samples": [
+            "Ograda",
+            "I would like to know more about Ograda",
+            "what about Ograda",
+            "tell me about Ograda",
+            "Ograda please",
+            "I would like to know more about Ograda please",
+            "tell me about Ograda please",
+            "let\u0027s see Ograda",
+            "I\u0027m choosing Ograda",
+            "I want Ograda",
+            "I want Ograda please",
+            "let\u0027s hear about Ograda",
+            "tell me more about Ograda",
+            "tell me more about Ograda please",
+            "I want to Ograda",
+            "I want to Ograda please"
+          ]
+        },
+        {
+          "name": "SergianaIntent",
+          "slots": [],
+          "samples": [
+            "I want to Sergiana please",
+            "I want to Sergiana",
+            "tell me more about Sergiana please",
+            "tell me more about Sergiana",
+            "let\u0027s hear about Sergiana",
+            "I want Sergiana please",
+            "I want Sergiana",
+            "I\u0027m choosing Sergiana",
+            "let\u0027s see Sergiana",
+            "tell me about Sergiana please",
+            "Sergiana please",
+            "tell me about Sergiana",
+            "what about Sergiana",
+            "I would like to know more about Sergiana",
+            "Sergiana",
+            "I would like to know more about Sergiana please"
+          ]
         }
       ],
       "types": [],
@@ -194,5 +252,5 @@
       }
     ]
   },
-  "version": "35"
+  "version": "41"
 }
