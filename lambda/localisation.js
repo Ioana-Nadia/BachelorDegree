@@ -59,6 +59,42 @@ module.exports = {
                                         The restaurant is located on Diaconu Coresi Street number six, and is open daily from 8 AM to 10 PM.
                                         As a recommendation... try candied duck leg with stewed cabbage and mashed potatoes with truffles.  
                                      </amazon:emotion>`,
+            ROMANIAN_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Romanian??
+                                        Let me check
+                                        <break time="2s"/>
+                                        <audio src="soundbank://soundlibrary/foley/amzn_sfx_glasses_clink_01"/>
+                                        <say-as interpret-as="interjection">bingo!</say-as>
+                                        I know!
+                                        <break time="1s"/>
+                                        There are two popular restaurants
+                                        <break time="500ms"/>
+                                        Ograda
+                                        <break time="500ms"/>
+                                        , and Sergiana
+                                        <break time="1s"/>
+                                        Choose one!
+                                    </amazon:emotion>`,
+            OGRADA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        At OGRADA you will find the market: local producers surrounded by the delicacies they carefully prepare, 
+                                        food that we fell in love with from the first bite, 
+                                        and a restaurant: the place where we prepare the dishes from this menu with ingredients from the area,
+                                        so that you can taste and understand how much can be made.
+                                        <break time="1s"/>
+                                        The restaurant is located in Council Square number fourteen and is open daily from 12 PM to 22 PM.
+                                        <break time="1s"/>
+                                        As a recommendation... try pork ribs with ripe apples.
+                                   </amazon:emotion>`,
+            SERGIANA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Refined service and waitresses dressed in folk costumes. 
+                                        Pork greaves with onion and fresh bread, on the house. A rich menu and happy people. 
+                                        The charm of the Sergiana kitchen is unmistakable, as it lies in its traditional recipes and in the products that we deliver from our local farms on a daily basis.
+                                        This is why our dishes are incredibly tasty and preserve the olden tastes, in three languages - German, Hungarian and Romanian.
+                                        <break time="1s"/>
+                                        The restaurant is located on Zaharia Stancu street number one, inside Coresi Mall and is open daily from 10 AM to 22 PM.
+                                        <break time="1s"/>
+                                        As a recommendation... try tripe sour soup with sour cream.
+                                   </amazon:emotion>`,
             REJECTED_MSG: 'No problem. Please say the name again so I can get it right. ',
             MISSING_MSG: `It looks like you haven't told me your first name yet. `,
             HELP_MSG: 'I can help you to have some fun in Brasov city. Are you hungry or do you want to visit the city? ',
@@ -134,6 +170,42 @@ module.exports = {
                                         Le restaurant est situé au numéro six de la rue Diaconu Coresi et est ouvert tous les jours de 8h00 à 22h00.
                                         En guise de recommandation... essayez la cuisse de canard confite avec du chou compoté et de la purée de pommes de terre aux truffes. 
                                      </amazon:emotion>`,
+            ROMANIAN_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Roumain??
+                                        Laisse moi vérifier
+                                        <break time="2s"/>
+                                        <audio src="soundbank://soundlibrary/foley/amzn_sfx_glasses_clink_01"/>
+                                        <say-as interpret-as="interjection">Bingo!</say-as>
+                                        Je sais!
+                                        <break time="1s"/>
+                                        Il y a deux restaurants populaires
+                                        <break time="500ms"/>
+                                        Ograda
+                                        <break time="500ms"/>
+                                        , et Sergiana
+                                        <break time="1s"/>
+                                        Choisissez-en un!
+                                    </amazon:emotion>`,
+            OGRADA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                      A OGRADA vous trouverez le marché : des producteurs locaux entourés des délices qu'ils préparent avec soin,
+                                      des plats dont nous sommes tombés amoureux dès la première bouchée,
+                                      et un restaurant : le lieu où l'on prépare les plats de cette carte avec des ingrédients de la région,
+                                      afin que vous puissiez goûter et comprendre combien peut être fait.
+                                      <break time="1s"/>
+                                      Le restaurant est situé au numéro quatorze de la place du Conseil et est ouvert tous les jours de 12h à 22h.
+                                      <break time="1s"/>
+                                      Comme recommandation... essayez les côtes de porc avec des pommes mûres.
+                                   </amazon:emotion>`,
+            SERGIANA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Service raffiné et serveuses vêtues de costumes folkloriques.
+                                         Cretons de porc à l'oignon et pain frais, offerts par la maison. Un menu riche et des gens heureux.
+                                         Le charme de la cuisine Sergiana est indéniable, car il réside dans ses recettes traditionnelles et dans les produits que nous livrons quotidiennement de nos fermes locales.
+                                         C'est pourquoi nos plats sont incroyablement savoureux et préservent les goûts d'autrefois, en trois langues - allemand, hongrois et roumain.
+                                        <break time="1s"/>
+                                        Le restaurant est situé au numéro un de la rue Zaharia Stancu, à l'intérieur du centre commercial Coresi et est ouvert tous les jours de 10h à 22h.
+                                        <break time="1s"/>
+                                        En guise de recommandation, essayez la soupe aux tripes avec de la crème sure.
+                                   </amazon:emotion>`,
             REJECTED_MSG: 'Aucun problème. Veuillez répéter le nom pour que je puisse le comprendre correctement. ',
             MISSING_MSG: `On dirait que tu ne m'as pas encore dit ton prénom. `,
             HELP_MSG: 'Je peux vous aider à vous amuser dans la ville de Brasov. Avez-vous faim ou voulez-vous visiter la ville? ',

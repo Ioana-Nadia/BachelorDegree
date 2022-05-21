@@ -26,7 +26,15 @@
       }
     },
     "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "locales": {
+        "en-US": {}
+      }
+    },
     "publishingInformation": {
+      "automaticDistribution": {
+        "isActive": false
+      },
       "category": "KNOWLEDGE_AND_TRIVIA",
       "distributionCountries": [],
       "isAvailableWorldwide": true,
@@ -34,9 +42,9 @@
         "en-US": {
           "description": "Sample Full Description",
           "examplePhrases": [
-            "Alexa open hello world",
-            "hello",
-            "help"
+            "Alexa open tourist in brasov",
+            "",
+            ""
           ],
           "keywords": [],
           "name": "Tourist in Brasov",

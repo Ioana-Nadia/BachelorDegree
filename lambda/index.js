@@ -53,11 +53,11 @@ const LaunchRequestHandler = {
 
 const RegisterNameIntentHandler = {
     canHandle(handlerInput) {
-        const {attributesManager, requestEnvelope} = handlerInput;
-        const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
+        //const {attributesManager, requestEnvelope} = handlerInput;
+       // const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RegisterNameIntent'
-            && !firstName;
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RegisterNameIntent';
+           // && !firstName;
     },
     handle(handlerInput) {
         const {attributesManager, requestEnvelope} = handlerInput;
@@ -174,6 +174,51 @@ const SommelierIntentHandler = {
     handle(handlerInput) {
         let speakOutput = "";
         speakOutput += handlerInput.t('SOMMELIER_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const RomanianFoodIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RomanianFoodIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('ROMANIAN_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const OgradaIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'OgradaIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('OGRADA_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const SergianaIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'SergianaIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('SERGIANA_INTEREST_MSG');
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .reprompt(speakOutput)
@@ -348,6 +393,9 @@ exports.handler = Alexa.SkillBuilders.custom()
         InternationalFoodIntentHandler,
         MonarkIntentHandler,
         SommelierIntentHandler,
+        RomanianFoodIntentHandler,
+        OgradaIntentHandler,
+        SergianaIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
