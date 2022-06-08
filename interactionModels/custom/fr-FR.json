@@ -186,9 +186,66 @@
             "dis m\u0027en plus sur Sergiana",
             "dis m\u0027en plus sur Sergiana s\u0027il vous plait"
           ]
+        },
+        {
+          "name": "ChooseAttractionIntent",
+          "slots": [
+            {
+              "name": "attraction",
+              "type": "attractionName"
+            }
+          ],
+          "samples": [
+            "Je veux voir {attraction}",
+            "dis m\u0027en plus sur {attraction}",
+            "{attraction}",
+            "donnez-moi des informations sur {attraction}",
+            "voyons {attraction}",
+            "donnez-moi des détails sur {attraction}",
+            "donnez-moi plus de détails sur {attraction}",
+            "dites-m\u0027en plus sur {attraction} s\u0027il vous plaît",
+            "donnez-moi des détails sur {attraction} s\u0027il vous plaît",
+            "donnez-moi des informations sur {attraction} s\u0027il vous plaît"
+          ]
         }
       ],
-      "types": []
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "dracula\u0027s castle"
+              }
+            },
+            {
+              "name": {
+                "value": "aventura park"
+              }
+            },
+            {
+              "name": {
+                "value": "zoo"
+              }
+            },
+            {
+              "name": {
+                "value": "rope street"
+              }
+            },
+            {
+              "name": {
+                "value": "aquatic paradise"
+              }
+            },
+            {
+              "name": {
+                "value": "poker club"
+              }
+            }
+          ],
+          "name": "attractionName"
+        }
+      ]
     },
     "dialog": {
       "intents": [
@@ -207,6 +264,22 @@
               "prompts": {
                 "elicitation": "Elicit.Slot.97186845675.1012525732043"
               }
+            }
+          ]
+        },
+        {
+          "name": "ChooseAttractionIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1099534110260"
+          },
+          "slots": [
+            {
+              "name": "attraction",
+              "type": "attractionName",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
             }
           ]
         }
@@ -231,8 +304,17 @@
             "value": "Quel est votre prénom?"
           }
         ]
+      },
+      {
+        "id": "Confirm.Intent.1099534110260",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Donc, vous voulez en savoir plus sur {attraction} . J\u0027ai raison?"
+          }
+        ]
       }
     ]
   },
-  "version": "13"
+  "version": "14"
 }

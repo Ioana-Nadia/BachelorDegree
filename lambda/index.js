@@ -77,6 +77,58 @@ const RegisterNameIntentHandler = {
     }
 };
 
+const ChooseAttractionIntentHandler = {
+    canHandle(handlerInput) {
+        //const {attributesManager, requestEnvelope} = handlerInput;
+       // const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ChooseAttractionIntent';
+           // && !firstName;
+    },
+    handle(handlerInput) {
+        const {attributesManager, requestEnvelope} = handlerInput;
+        const sessionAttributes = attributesManager.getSessionAttributes();
+        const {intent} = requestEnvelope.request;
+        let outputSpeech = "";
+        
+        if (intent.confirmationStatus === 'CONFIRMED') {
+            const attrName = Alexa.getSlotValue(requestEnvelope, 'attraction');
+            switch(attrName) {
+                case "Dracula's castle":
+                    outputSpeech += handlerInput.t('DRACULAS_INTEREST_MSG')
+                    break;
+                case "Aventura park":
+                    outputSpeech += handlerInput.t('AVENTURA_INTEREST_MSG')
+                    break;
+                case "zoo":
+                    outputSpeech += handlerInput.t('ZOO_INTEREST_MSG')
+                    break;
+                case "rope street":
+                    outputSpeech += handlerInput.t('ROPE_STR_INTEREST_MSG')
+                    break;
+                case "aquatic paradise":
+                    outputSpeech += handlerInput.t('AQUATIC_INTEREST_MSG')
+                    break;
+                case "poker club":
+                    outputSpeech += handlerInput.t('POKER_INTEREST_MSG')
+                    break;
+            }
+            
+            return handlerInput.responseBuilder
+                .speak(outputSpeech)
+                .reprompt(outputSpeech)
+                .getResponse();
+        }
+        else {
+            outputSpeech += handlerInput.t('REJECTED_MSG');
+            return handlerInput.responseBuilder
+                .speak(outputSpeech)
+                .reprompt(handlerInput.t('REPROMPT_MSG'))
+                .getResponse();
+        }
+    }
+};
+
 const VisitCityIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -387,6 +439,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         RegisterNameIntentHandler,
+        ChooseAttractionIntentHandler,
         VisitCityIntentHandler,
         InterestedInFoodIntentHandler,
         InterestedInPlacesIntentHandler,

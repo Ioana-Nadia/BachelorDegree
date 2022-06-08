@@ -33,8 +33,26 @@ module.exports = {
                                     <break time="500ms"/>
                                     So, which one would you like to try?
                                 </amazon:emotion>`,
-            PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">    
-                                    Cool!!! Let's see some amazing places here! 
+            PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">
+                                    <say-as interpret-as="interjection">yabba dabba doo</say-as>
+                                    <break time="1s"/>
+                                    Cool!!! That's my favorite part regarding a city break because I can take pictures!
+                                    <audio src="soundbank://soundlibrary/camera/camera_01"/>
+                                    <break time="1s"/>
+                                    Let's see some amazing places here!
+                                    <break time="1s"/>
+                                    I've prepared a list of options for you!
+                                    So...
+                                    Dracula's Castle,
+                                    Aventura Park,
+                                    Zoo,
+                                    and Rope Street.
+                                    <break time="1s"/>
+                                    As some extras...
+                                    If you are passionate about swimming, you can go to Aquatic Paradise.
+                                    <break time="1s"/>
+                                    Or if you are a poker enthusiast, then Seven Inn Poker Club is for you!!
+                                    Choose an option, and I will give you the details!!
                                   </amazon:emotion>`,
             INTERNATIONAL_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
                                             So, you want international...
@@ -95,10 +113,28 @@ module.exports = {
                                         <break time="1s"/>
                                         As a recommendation... try tripe sour soup with sour cream.
                                    </amazon:emotion>`,
-            REJECTED_MSG: 'No problem. Please say the name again so I can get it right. ',
+            DRACULAS_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    That Dracula's Castle. It works!!!
+                                    </amazon:emotion>`,
+            AVENTURA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    That Aventura Park. It works!!!
+                                    </amazon:emotion>`,  
+            ZOO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    That Zoo. It works!!!
+                                    </amazon:emotion>`,
+            ROPE_STR_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    That Rope Street. It works!!!
+                                    </amazon:emotion>`,
+            AQUATIC_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    That Aquatic Paradise. It works!!!
+                                    </amazon:emotion>`,
+            POKER_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                    That Poker Casino. It works!!!
+                                    </amazon:emotion>`,
+            REJECTED_MSG: 'No problem. Please say it again, so I can get it right. ',
             MISSING_MSG: `It looks like you haven't told me your first name yet. `,
             HELP_MSG: 'I can help you to have some fun in Brasov city. Are you hungry or do you want to visit the city? ',
-            REPROMPT_MSG: `If you're not sure what to do next try asking for help. `,
+            REPROMPT_MSG: `If you're not sure what to do next, try asking for help. `,
             GOODBYE_MSG: 'Goodbye, {{name}}! ',
             REFLECTOR_MSG: 'You just triggered {{intent}}. ',
             FALLBACK_MSG: `<amazon:emotion name="disappointed" intensity="high">
@@ -144,9 +180,27 @@ module.exports = {
                                     <break time="500ms"/>
                                     Alors, lequel aimeriez-vous essayer?
                                 </amazon:emotion>`,
-            PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">    
-                                    Cool!!! Voyons quelques endroits incroyables ici!
-                                 </amazon:emotion>`,
+            PLACES_INTEREST_MSG: `<amazon:emotion name="excited" intensity="high">
+                                    <say-as interpret-as="interjection">Woo hoo</say-as>
+                                    <break time="1s"/>
+                                    Cool!!! C'est ma partie préférée concernant une escapade en ville parce que je peux prendre des photos !
+                                    <audio src="soundbank://soundlibrary/camera/camera_01"/>
+                                    <break time="1s"/>
+                                    Voyons quelques endroits incroyables ici!
+                                    <break time="1s"/>
+                                    Je vous ai préparé une liste d'options !
+                                    Alors...
+                                    <lang xml:lang="en-US">Dracula's Castle</lang>,
+                                    <lang xml:lang="en-US">Aventura Park</lang>,
+                                    <lang xml:lang="en-US">Zoo</lang>,
+                                    <lang xml:lang="en-US">Rope Street</lang>
+                                    <break time="1s"/>
+                                    Comme quelques extras...
+                                    Si vous êtes passionné de natation, vous pouvez vous rendre au <lang xml:lang="en-US">Aquatic Paradise</lang>!
+                                    <break time="1s"/>
+                                    Ou si vous êtes un passionné de poker, alors <lang xml:lang="en-US">Seven Inn Poker Club</lang> est fait pour vous!!
+                                    Choisissez une option, et je vous donnerai les détails!!
+                                  </amazon:emotion>`,
             INTERNATIONAL_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
                                             Alors, tu veux international...
                                             <say-as interpret-as="interjection">Hmmm</say-as>.
@@ -206,7 +260,25 @@ module.exports = {
                                         <break time="1s"/>
                                         En guise de recommandation, essayez la soupe aux tripes avec de la crème sure.
                                    </amazon:emotion>`,
-            REJECTED_MSG: 'Aucun problème. Veuillez répéter le nom pour que je puisse le comprendre correctement. ',
+            DRACULAS_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Dracula! C'est bien!
+                                    </amazon:emotion>`,
+            AVENTURA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        Aventure! C'est bien!
+                                    </amazon:emotion>`,  
+            ZOO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                   Zoo! C'est bien!
+                               </amazon:emotion>`,
+            ROPE_STR_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        La rue!! C'est bien!!
+                                    </amazon:emotion>`,
+            AQUATIC_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                       Le paradis! C'est bien!
+                                   </amazon:emotion>`,
+            POKER_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                     Le casino! C'est bien!
+                                 </amazon:emotion>`,
+            REJECTED_MSG: `Aucun problème. S'il vous plaît, répétez-le que je puisse le comprendre correctement. `,
             MISSING_MSG: `On dirait que tu ne m'as pas encore dit ton prénom. `,
             HELP_MSG: 'Je peux vous aider à vous amuser dans la ville de Brasov. Avez-vous faim ou voulez-vous visiter la ville? ',
             REPROMPT_MSG: `Si vous ne savez pas quoi faire ensuite, essayez de demander de l'aide. `,
