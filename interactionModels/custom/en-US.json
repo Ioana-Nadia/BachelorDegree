@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "tourist in the city of dracula",
+      "invocationName": "my degree",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -199,9 +199,69 @@
             "Sergiana",
             "I would like to know more about Sergiana please"
           ]
+        },
+        {
+          "name": "ChooseAttractionIntent",
+          "slots": [
+            {
+              "name": "attraction",
+              "type": "attractionName"
+            }
+          ],
+          "samples": [
+            "tell me some information about {attraction} please",
+            "tell me details about {attraction} please",
+            "give me more details about {attraction} please",
+            "tell me more about {attraction} please",
+            "give me more details about {attraction}",
+            "tell me details about {attraction}",
+            "let\u0027s see {attraction}",
+            "tell me some information about {attraction}",
+            "give me information about {attraction}",
+            "{attraction}",
+            "give me details about {attraction}",
+            "tell me more about {attraction}",
+            "I wanna see {attraction}"
+          ]
         }
       ],
-      "types": [],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "poker club"
+              }
+            },
+            {
+              "name": {
+                "value": "aquatic paradise"
+              }
+            },
+            {
+              "name": {
+                "value": "rope street"
+              }
+            },
+            {
+              "name": {
+                "value": "zoo"
+              }
+            },
+            {
+              "name": {
+                "value": "aventura park"
+              }
+            },
+            {
+              "name": {
+                "value": "dracula\u0027s castle"
+              }
+            }
+          ],
+          "name": "attractionName"
+        }
+      ],
       "modelConfiguration": {
         "fallbackIntentSensitivity": {
           "level": "HIGH"
@@ -227,6 +287,22 @@
               }
             }
           ]
+        },
+        {
+          "name": "ChooseAttractionIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.622490471036"
+          },
+          "slots": [
+            {
+              "name": "attraction",
+              "type": "attractionName",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ]
         }
       ],
       "delegationStrategy": "ALWAYS"
@@ -249,8 +325,17 @@
             "value": "What\u0027s your first name?"
           }
         ]
+      },
+      {
+        "id": "Confirm.Intent.622490471036",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "So, you want to know more about {attraction} . Am I right?"
+          }
+        ]
       }
     ]
   },
-  "version": "41"
+  "version": "47"
 }
