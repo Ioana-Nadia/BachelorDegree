@@ -51,7 +51,7 @@ module.exports = {
                                     As some extras...
                                     If you are passionate about swimming, you can go to Aquatic Paradise.
                                     <break time="1s"/>
-                                    Or if you are a poker enthusiast, then Seven Inn Poker Club is for you!!
+                                    Or if you are a poker enthusiast, then Spoker Poker Club is for you!!
                                     Choose an option, and I will give you the details!!
                                   </amazon:emotion>`,
             INTERNATIONAL_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
@@ -114,22 +114,76 @@ module.exports = {
                                         As a recommendation... try tripe sour soup with sour cream.
                                    </amazon:emotion>`,
             DRACULAS_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    That Dracula's Castle. It works!!!
+                                        <audio src="soundbank://soundlibrary/monsters/pigmy_bats/pigmy_bats_04"/>
+                                        <break time="500ms"/>
+                                        The castle is located in Bran on General Traian Moșoiu street number twenty-four. 
+                                        <break time="500ms"/>
+                                        It is twenty-five kilometers southwest of Brasov and it reprezents a national monument and landmark in Transylvania. 
+                                        More exactly, the fortress is on the Transylvanian side of the historical border with Wallachia, on road DN73.
+                                        <audio src="soundbank://soundlibrary/monsters/vampires/vampires_01"/>
+                                        It is often referred to as the home of the title character in Bram Stoker's Dracula...
+                                        <audio src="soundbank://soundlibrary/monsters/vampires/vampires_10"/>
+                                        The vampire who has associations with Vlad the Impaler
+                                        <break time="500ms"/>
+                                        The castle is now a museum dedicated to displaying art and furniture collected by Queen Marie. 
+                                        Tourists can see the interior on their own or by a guided tour and it is open daily from 9 AM to 6 PM. Pay attention!! Only on Mondays it can be visited between 12 PM and 6 PM.
+                                        <break time="500ms"/>
+                                        The price of the standard ticket is 45 RON. 
+                                        <break time="250ms"/>
+                                        Have fun there!!
                                     </amazon:emotion>`,
             AVENTURA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    That Aventura Park. It works!!!
+                                        The park is intended for recreation and embody the spirit outdoor. It's located in Brasov on Paltinului street number sixteen next to Noua lake.
+                                        This is a place which can contain a wide variety of elements, including but not limited to, rope climbing exercises, obstacle courses, bouldering, rock climbing, target oriented activities, and zip-lines. 
+                                        <break time="250ms"/>
+                                        It is open in the warm season between 10 AM and 7 PM.
+                                        The price of a standard ticket is ninety RON and it includes 3 hours of adventure.
+                                        <break time="250ms"/>
+                                        If you will go there, don't forget to say:
+                                        <say-as interpret-as="interjection">geronimo</say-as>
                                     </amazon:emotion>`,  
             ZOO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    That Zoo. It works!!!
-                                    </amazon:emotion>`,
+                                    <audio src="soundbank://soundlibrary/animals/amzn_sfx_bird_chickadee_chirp_1x_01"/>
+                                    <break time="250ms"/>
+                                    <audio src="soundbank://soundlibrary/animals/amzn_sfx_lion_roar_03"/>
+                                    <break time="250ms"/>
+                                    <audio src="soundbank://soundlibrary/animals/amzn_sfx_monkey_chimp_01"/>
+                                    <break time="250ms"/>
+                                    <audio src="soundbank://soundlibrary/camera/camera_01"/>
+                                    <audio src="soundbank://soundlibrary/camera/camera_01"/>
+                                    <break time="250ms"/>
+                                    Zoo is the short for zoological garden. 
+                                    Here in Brasov, this is located on Brazilor street number one.
+                                    It was opened in 1960, and it's on 25 acres offering visitors a unique lions' den view, a reptile house, and a playground.
+                                    There you can see a lot of animals.
+                                    <break time="250ms"/>
+                                    This zoo is open from Tuesday to Sunday between 9AM and 7PM.
+                                    A standard ticket costs 20 RON
+                                    Please enjoy this beautiful view!
+                                </amazon:emotion>`,
             ROPE_STR_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    That Rope Street. It works!!!
+                                        Rope Street is the narrowest street in this city. 
+                                        It is believed to be one of the narrowest streets in Europe.
+                                        This was initially built as a corridor that firemen could use, and it is first mentioned in 17th century documents. 
+                                        <break time="250ms"/>
+                                        Rope Street is now a tourist attraction and meeting spot. Its width varies between 111 and 135 centimetres, and it is 80 metres long.
+                                        You can find it on a map using this name, entrance is free!
                                     </amazon:emotion>`,
             AQUATIC_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    That Aquatic Paradise. It works!!!
+                                       <audio src="soundbank://soundlibrary/boats_ships/splashing_rowboat/splash_water_01"/>
+                                       Aquatic Paradise is a spacious leisure center with multiple indoor and outdoor pools, a gym, sauna, restaurant and more.
+                                       It is located on Grivitei 2F Street.
+                                       <break time="250ms"/>
+                                       It is open from Tuesday to Friday between 10AM and 9PM, Saturday and Sunday between 9 AM and 9 PM. Mondays, it's open between 12 PM and 9 PM.
+                                       There are a lot of ticket types. The price is calculated regarding the days and the number of hours. The client can choose to have subscription.
+                                       For example, the cheapest two-hour ticket costs 40 RON.
                                     </amazon:emotion>`,
             POKER_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                    That Poker Casino. It works!!!
+                                        That Poker Casino, it's called Spoker.
+                                        <break time="250ms"/>
+                                        It is located on Avram Iancu Street number 114 and it's open daily between 6 PM and 6 AM.
+                                        Visit the club to get more informations about the tournaments.
+                                        Good luck!
                                     </amazon:emotion>`,
             REJECTED_MSG: 'No problem. Please say it again, so I can get it right. ',
             MISSING_MSG: `It looks like you haven't told me your first name yet. `,
@@ -261,23 +315,76 @@ module.exports = {
                                         En guise de recommandation, essayez la soupe aux tripes avec de la crème sure.
                                    </amazon:emotion>`,
             DRACULAS_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                        Dracula! C'est bien!
+                                        <audio src="soundbank://soundlibrary/monsters/pigmy_bats/pigmy_bats_04"/>
+                                        <break time="500ms"/>
+                                        Le château est situé à Bran au numéro vingt-quatre de la rue General Traian Moșoiu. 
+                                        <break time="500ms"/>
+                                        Il se trouve à vingt-cinq kilomètres au sud-ouest de Brasov et représente un monument national et un point de repère en Transylvanie.
+                                        Plus exactement, la forteresse se trouve du côté transylvanien de la frontière historique avec la Valachie, sur la route DN73.
+                                        <audio src="soundbank://soundlibrary/monsters/vampires/vampires_01"/>
+                                        On l'appelle souvent la maison du personnage principal de Dracula de Bram Stoker...
+                                        <audio src="soundbank://soundlibrary/monsters/vampires/vampires_10"/>
+                                        Le vampire qui a des associations avec Vlad l'Empaleur
+                                        <break time="500ms"/>
+                                        Le château est maintenant un musée dédié à l'exposition d'art et de meubles collectés par la reine Marie.
+                                        Les touristes peuvent voir l'intérieur par eux-mêmes ou par une visite guidée et il est ouvert tous les jours de 9h00 à 18h00. Faites attention!! Uniquement le lundi, il peut être visité entre 12h et 18h.
+                                        <break time="500ms"/>
+                                        Le prix du billet standard est de 45 RON.
+                                        <break time="250ms"/>
+                                        Amusez-vous là-bas!!
                                     </amazon:emotion>`,
             AVENTURA_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                        Aventure! C'est bien!
-                                    </amazon:emotion>`,  
+                                        Le parc est destiné aux loisirs et incarne l'esprit outdoor. Il est situé à Brasov sur la rue Paltinului numéro seize à côté du lac Noua.
+                                        C'est un endroit qui peut contenir une grande variété d'éléments, y compris, mais sans s'y limiter, des exercices d'escalade sur corde, des parcours d'obstacles, du bloc, de l'escalade, des activités ciblées et des tyroliennes.
+                                        <break time="250ms"/>
+                                        Il est ouvert en saison chaude entre 10h et 19h.
+                                        Le prix d'un billet standard est de quatre-vingt-dix RON et comprend 3 heures d'aventure.
+                                        <break time="250ms"/>
+                                        Si vous y allez, n'oubliez pas de dire.
+                                    </amazon:emotion>`,
             ZOO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                   Zoo! C'est bien!
-                               </amazon:emotion>`,
+                                    <audio src="soundbank://soundlibrary/animals/amzn_sfx_bird_chickadee_chirp_1x_01"/>
+                                    <break time="250ms"/>
+                                    <audio src="soundbank://soundlibrary/animals/amzn_sfx_lion_roar_03"/>
+                                    <break time="250ms"/>
+                                    <audio src="soundbank://soundlibrary/animals/amzn_sfx_monkey_chimp_01"/>
+                                    <break time="250ms"/>
+                                    <audio src="soundbank://soundlibrary/camera/camera_01"/>
+                                    <audio src="soundbank://soundlibrary/camera/camera_01"/>
+                                    <break time="250ms"/>
+                                    Zoo est l'abréviation de jardin zoologique.
+                                    Ici à Brasov, c'est situé sur la rue Brazilor numéro un.
+                                    Il a été ouvert en 1960 et s'étend sur 25 acres offrant aux visiteurs une vue unique sur le taniere des lions, une maison de reptiles et un terraine de jeux.
+                                    Là, vous pouvez voir beaucoup d'animaux.
+                                    <break time="250ms"/>
+                                    Ce zoo est ouvert du mardi au dimanche de 9h à 19h.
+                                    Un billet standard coûte 20 RON
+                                    S'il vous plaît profiter de cette belle vue!
+                                </amazon:emotion>`,
             ROPE_STR_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                        La rue!! C'est bien!!
+                                        Rope Street est la rue la plus étroite de cette ville.
+                                        On pense que c'est l'une des rues les plus étroites d'Europe.
+                                        Il a été initialement construit comme un couloir que les pompiers pouvaient utiliser, et il est mentionné pour la première fois dans des documents du XVIIe siècle.
+                                        <break time="250ms"/>
+                                        Rope Street est maintenant une attraction touristique et un lieu de rencontre. Sa largeur varie entre 111 et 135 centimètres, et il mesure 80 mètres de long.
+                                        Vous pouvez le trouver sur une carte en utilisant ce nom, l'entrée est gratuite!
                                     </amazon:emotion>`,
             AQUATIC_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                       Le paradis! C'est bien!
-                                   </amazon:emotion>`,
+                                       <audio src="soundbank://soundlibrary/boats_ships/splashing_rowboat/splash_water_01"/>
+                                       Aquatic Paradise est un centre de loisirs spacieux avec plusieurs piscines intérieures et extérieures, une salle de sport, un sauna, un restaurant et bien plus encore.
+                                       Il est situé sur la rue Grivitei 2F.
+                                       <break time="250ms"/>
+                                       Il est ouvert du mardi au vendredi de 10h à 21h, le samedi et le dimanche de 9h à 21h. Le lundi, il est ouvert de 12h à 21h.
+                                       Il existe de nombreux types de billets. Le prix est calculé en fonction des jours et du nombre d'heures. Le client peut choisir d'avoir un abonnement.
+                                       Par exemple, le billet de deux heures le moins cher coûte 40 RON.
+                                    </amazon:emotion>`,
             POKER_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
-                                     Le casino! C'est bien!
-                                 </amazon:emotion>`,
+                                        Ce Poker Casino s'appelle Spoker.
+                                        <break time="250ms"/>
+                                        Il est situé au numéro 114 de la rue Avram Iancu et est ouvert tous les jours de 18 h 00 à 06 h 00.
+                                        Visitez le club pour obtenir plus d'informations sur les tournois.
+                                        Bonne chance!
+                                    </amazon:emotion>`,
             REJECTED_MSG: `Aucun problème. S'il vous plaît, répétez-le que je puisse le comprendre correctement. `,
             MISSING_MSG: `On dirait que tu ne m'as pas encore dit ton prénom. `,
             HELP_MSG: 'Je peux vous aider à vous amuser dans la ville de Brasov. Avez-vous faim ou voulez-vous visiter la ville? ',
