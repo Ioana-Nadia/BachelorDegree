@@ -92,24 +92,25 @@ const ChooseAttractionIntentHandler = {
         let outputSpeech = "";
         
         if (intent.confirmationStatus === 'CONFIRMED') {
-            const attrName = Alexa.getSlotValue(requestEnvelope, 'attraction');
-            switch(attrName) {
-                case "Dracula's castle":
+            let attrName = Alexa.getSlotValue(requestEnvelope, 'attraction');
+            let upperValue = attrName.toUpperCase();
+            switch(upperValue) {
+                case "DRACULA'S CASTLE":
                     outputSpeech += handlerInput.t('DRACULAS_INTEREST_MSG')
                     break;
-                case "Aventura park":
+                case "AVENTURA PARK":
                     outputSpeech += handlerInput.t('AVENTURA_INTEREST_MSG')
                     break;
-                case "zoo":
+                case "ZOO":
                     outputSpeech += handlerInput.t('ZOO_INTEREST_MSG')
                     break;
-                case "rope street":
+                case "ROPE STREET":
                     outputSpeech += handlerInput.t('ROPE_STR_INTEREST_MSG')
                     break;
-                case "aquatic paradise":
+                case "AQUATIC PARADISE":
                     outputSpeech += handlerInput.t('AQUATIC_INTEREST_MSG')
                     break;
-                case "poker club":
+                case "POKER CLUB":
                     outputSpeech += handlerInput.t('POKER_INTEREST_MSG')
                     break;
             }
