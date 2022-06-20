@@ -340,7 +340,8 @@ module.exports = {
                                         Il est ouvert en saison chaude entre 10h et 19h.
                                         Le prix d'un billet standard est de quatre-vingt-dix RON et comprend 3 heures d'aventure.
                                         <break time="250ms"/>
-                                        Si vous y allez, n'oubliez pas de dire.
+                                        Si vous y allez, n'oubliez pas de dire:
+                                        <say-as interpret-as="interjection">Youhou</say-as>
                                     </amazon:emotion>`,
             ZOO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
                                     <audio src="soundbank://soundlibrary/animals/amzn_sfx_bird_chickadee_chirp_1x_01"/>
