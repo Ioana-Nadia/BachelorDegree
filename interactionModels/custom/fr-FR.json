@@ -207,6 +207,69 @@
             "donnez-moi des détails sur {attraction} s\u0027il vous plaît",
             "donnez-moi des informations sur {attraction} s\u0027il vous plaît"
           ]
+        },
+        {
+          "name": "MediterraneanFoodIntent",
+          "slots": [],
+          "samples": [
+            "dis m\u0027en plus sur les restaurants méditerranéen",
+            "dis m\u0027en plus sur le méditerranéen",
+            "nourriture méditerranéen",
+            "Je voudrais un restaurant méditerranéen",
+            "Je voudrais de la nourriture méditerranéen",
+            "Je voudrais le méditerranéen",
+            "méditerranéen"
+          ]
+        },
+        {
+          "name": "VinoESaporiIntent",
+          "slots": [],
+          "samples": [
+            "dis m\u0027en plus sur vino et sapori s\u0027il vous plait",
+            "dis m\u0027en plus sur vino et sapori",
+            "parlons de vino et sapori",
+            "je veux vino et sapori s\u0027il vous plait",
+            "je veux vino et sapori",
+            "je choisis vino et sapori",
+            "voyons vino et sapori",
+            "parlez-moi de vino et sapori s\u0027il vous plait",
+            "je voudrais en savoir plus sur vino et sapori s\u0027il vous plait",
+            "vino et sapori s\u0027il vous plait",
+            "parlez-moi de vino et sapori",
+            "qu\u0027en est-il de vino et sapori",
+            "j\u0027aimerais en savoir plus sur vino et sapori",
+            "vino et sapori"
+          ]
+        },
+        {
+          "name": "CucininoIntent",
+          "slots": [],
+          "samples": [
+            "dis m\u0027en plus sur cucinino s\u0027il vous plait",
+            "dis m\u0027en plus sur cucinino",
+            "parlons de cucinino",
+            "je veux cucinino s\u0027il vous plait",
+            "je veux cucinino",
+            "je choisis cucinino",
+            "voyons cucinino",
+            "parlez-moi de cucinino s\u0027il vous plait",
+            "je voudrais en savoir plus sur cucinino s\u0027il vous plait",
+            "cucinino s\u0027il vous plait",
+            "parlez-moi de cucinino",
+            "qu\u0027en est-il de cucinino",
+            "j\u0027aimerais en savoir plus sur cucinino",
+            "cucinino"
+          ]
+        },
+        {
+          "name": "GoodbyeIntent",
+          "slots": [],
+          "samples": [
+            "merci Alexa",
+            "bonne journée",
+            "à bientôt",
+            "on se parle plus tard"
+          ]
         }
       ],
       "types": [
@@ -316,5 +379,5 @@
       }
     ]
   },
-  "version": "14"
+  "version": "16"
 }

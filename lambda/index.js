@@ -67,6 +67,7 @@ const RegisterNameIntentHandler = {
         if (intent.confirmationStatus === 'CONFIRMED') {
             const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
             sessionAttributes['name'] = firstName;
+            sessionAttributes['sessionCounter'] = 1; 
             return VisitCityIntentHandler.handle(handlerInput);
         }
 
@@ -279,6 +280,51 @@ const SergianaIntentHandler = {
     }
 };
 
+const MediterraneanFoodIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'MediterraneanFoodIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('MEDITERRANEAN_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const VinoESaporiIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'VinoESaporiIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('VINOSAPORI_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
+const CucininoIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'CucininoIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        speakOutput += handlerInput.t('CUCININO_INTEREST_MSG');
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(speakOutput)
+            .getResponse();
+    }
+};
+
 const HelpIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -294,6 +340,23 @@ const HelpIntentHandler = {
     }
 };
 
+const GoodbyeIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'GoodbyeIntent';
+    },
+    handle(handlerInput) {
+        let speakOutput = "";
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        const firstName = sessionAttributes['name'];
+        speakOutput += handlerInput.t('GOODBYE_MSG', {name: firstName});
+        
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .getResponse();
+    }
+};
+
 const CancelAndStopIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
@@ -301,7 +364,9 @@ const CancelAndStopIntentHandler = {
             || Alexa.getIntentName(handlerInput.requestEnvelope) === 'AMAZON.StopIntent');
     },
     handle(handlerInput) {
-        const speakOutput = handlerInput.t('GOODBYE_MSG');
+        const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+        const firstName = sessionAttributes['name'];
+        const speakOutput = handlerInput.t('GOODBYE_MSG', {name: firstName});
         return handlerInput.responseBuilder
             .speak(speakOutput)
             .getResponse();
@@ -450,6 +515,10 @@ exports.handler = Alexa.SkillBuilders.custom()
         RomanianFoodIntentHandler,
         OgradaIntentHandler,
         SergianaIntentHandler,
+        MediterraneanFoodIntentHandler,
+        VinoESaporiIntentHandler,
+        CucininoIntentHandler,
+        GoodbyeIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

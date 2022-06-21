@@ -223,6 +223,72 @@
             "tell me more about {attraction}",
             "I wanna see {attraction}"
           ]
+        },
+        {
+          "name": "MediterraneanFoodIntent",
+          "slots": [],
+          "samples": [
+            "mediterranean",
+            "I would like mediterranean",
+            "I would like mediterranean food",
+            "I would like mediterranean restaurant",
+            "mediterranean food",
+            "tell me more about mediterranean",
+            "tell me more about mediterranean restaurants",
+            "I would like an mediterranean restaurant"
+          ]
+        },
+        {
+          "name": "VinoESaporiIntent",
+          "slots": [],
+          "samples": [
+            "I want to vino east sapori please",
+            "I want to vino east sapori",
+            "tell me more about vino east sapori please",
+            "tell me more about vino east sapori",
+            "let\u0027s hear about vino east sapori",
+            "I want vino east sapori",
+            "I\u0027m choosing vino east sapori",
+            "let\u0027s see vino east sapori",
+            "tell me about vino east sapori please",
+            "I would like to know more about vino east sapori please",
+            "vino east sapori please",
+            "tell me about vino east sapori",
+            "what about vino east sapori",
+            "I would like to know more about vino east sapori",
+            "vino east sapori"
+          ]
+        },
+        {
+          "name": "CucininoIntent",
+          "slots": [],
+          "samples": [
+            "I want to Cucinino please",
+            "I want to Cucinino",
+            "tell me more about Cucinino please",
+            "tell me more about Cucinino",
+            "let\u0027s hear about Cucinino",
+            "I want Cucinino",
+            "I\u0027m choosing Cucinino",
+            "let\u0027s see Cucinino",
+            "tell me about Cucinino please",
+            "I would like to know more about Cucinino please",
+            "Cucinino please",
+            "tell me about Cucinino",
+            "what about Cucinino",
+            "I would like to know more about Cucinino",
+            "Cucinino"
+          ]
+        },
+        {
+          "name": "GoodbyeIntent",
+          "slots": [],
+          "samples": [
+            "talk to you later",
+            "see you soon",
+            "have a nice day",
+            "thank you Alexa"
+          ]
         }
       ],
       "types": [
@@ -337,5 +403,5 @@
       }
     ]
   },
-  "version": "47"
+  "version": "55"
 }
