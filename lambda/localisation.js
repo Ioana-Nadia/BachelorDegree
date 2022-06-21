@@ -67,6 +67,49 @@ module.exports = {
                                             <break time="500ms"/>
                                             Which one would you like to pick?
                                          </amazon:emotion>`,
+            MEDITERRANEAN_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                            OK, mediterranean restaurants...
+                                            <break time="250ms"/>
+                                            But...
+                                            <break time="250ms"/>
+                                            I don't know...
+                                            <break time="1s"/>
+                                            <say-as interpret-as="interjection">gotcha</say-as>
+                                            <break time="250ms"/>
+                                            I was joking!
+                                            <break time="1s"/>
+                                            <say-as interpret-as="interjection">bada bing bada boom</say-as>
+                                            <break time="250ms"/>
+                                            I found two interesting restaurants for you!
+                                            <break time="500ms"/>
+                                            <lang xml:lang="it-IT">Vino E Sapori</lang>
+                                            <break time="500ms"/>
+                                            , and <lang xml:lang="it-IT">Cucinino</lang>
+                                            <break time="500ms"/>
+                                            Choose one of them and I will tell some words from the team of that restaurant.
+                                         </amazon:emotion>`,
+            VINOSAPORI_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        The team sends you a few words: 
+                                        <break time="500ms"/>
+                                        This restaurant was created out of our desire to combine wines with Italian dishes and to offer exceptional services at the right price to those who step on our doorstep. 
+                                        Your satisfaction is our mission. 
+                                        We are waiting for you today!
+                                        <break time="1s"/>
+                                        The restaurant is located on George Baritiu Street number 13 and is open daily from 12 PM to 11 PM.
+                                        <break time="1s"/>
+                                        As a recommendation... try <lang xml:lang="it-IT">Spectacolo di mare e orto</lang>.
+                                        It represents spaghetti with seafood and mussels cooked together with slightly spicy seasonal vegetables.
+                                   </amazon:emotion>`,
+            CUCININO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        <break time="250ms"/>
+                                        Cucinino addresses people interested in a healthy lifestyle, with fresh, quality ingredients, but prepared quickly in an open space kitchen. 
+                                        Recipes are reinterpreted.
+                                        They are carefully collected, tested and implemented by chef <lang xml:lang="it-IT">Mario Guglielmi</lang>.
+                                        <break time="1s"/>
+                                        The restaurant is located on Diaconu Coresi Street number 6 and is open daily from 12 PM to 10 PM.
+                                        <break time="1s"/>
+                                        As a recommendation... try <lang xml:lang="it-IT">Gnocchi Quattro Formaggi</lang>.
+                                   </amazon:emotion>`,
             MONARK_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
                                     MONARK features a diverse selection of extraordinary cuisine in a modern and expansive restaurant with dramatic massive windows, an ark feel, and touch design.
                                     The restaurant is located in QOSMO Hotel, on Zaharia Stancu Street number four, and is open daily from 7 AM to 12 AM.
@@ -189,7 +232,7 @@ module.exports = {
             MISSING_MSG: `It looks like you haven't told me your first name yet. `,
             HELP_MSG: 'I can help you to have some fun in Brasov city. Are you hungry or do you want to visit the city? ',
             REPROMPT_MSG: `If you're not sure what to do next, try asking for help. `,
-            GOODBYE_MSG: 'Goodbye, {{name}}! ',
+            GOODBYE_MSG: 'Goodbye {{name}}!',
             REFLECTOR_MSG: 'You just triggered {{intent}}. ',
             FALLBACK_MSG: `<amazon:emotion name="disappointed" intensity="high">
                                 Sorry, I don't know about that. Please try again.
@@ -314,6 +357,48 @@ module.exports = {
                                         <break time="1s"/>
                                         En guise de recommandation, essayez la soupe aux tripes avec de la crème sure.
                                    </amazon:emotion>`,
+            MEDITERRANEAN_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                            Bien, les restaurants méditerranéens...
+                                            <break time="250ms"/>
+                                            Mais...
+                                            <break time="250ms"/>
+                                            Je ne sais pas...
+                                            <break time="1s"/>
+                                            <break time="250ms"/>
+                                            Je rigolais!
+                                            <break time="1s"/>
+                                            <say-as interpret-as="interjection">bada bing bada boom</say-as>
+                                            <break time="250ms"/>
+                                            J'ai trouvé deux restaurants intéressants pour vous!
+                                            <break time="500ms"/>
+                                            <lang xml:lang="it-IT">Vino E Sapori</lang>
+                                            <break time="500ms"/>
+                                            , and <lang xml:lang="it-IT">Cucinino</lang>
+                                            <break time="500ms"/>
+                                            Choisissez-en un et je vous dirai quelques mots de l'équipe de ce restaurant.
+                                         </amazon:emotion>`,
+            VINOSAPORI_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        L'équipe vous envoie quelques mots : 
+                                        <break time="500ms"/>
+                                        Ce restaurant est né de notre désir d'allier les vins aux plats italiens et d'offrir des services exceptionnels au juste prix à ceux qui franchissent notre porte.
+                                        Votre satisfaction est notre mission.
+                                        Nous vous attendons aujourd'hui !
+                                        <break time="1s"/>
+                                        Le restaurant est situé au numéro 13 de la rue George Baritiu et est ouvert tous les jours de 12 h 00 à 23 h 00.
+                                        <break time="1s"/>
+                                        En guise de recommandation... essayer <lang xml:lang="it-IT">Spectacolo di mare e orto</lang>.
+                                        Il représente des spaghettis aux fruits de mer et moules cuisinés avec des légumes de saison légèrement épicés.
+                                   </amazon:emotion>`,
+            CUCININO_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
+                                        <break time="250ms"/>
+                                        Cucinino s'adresse aux personnes intéressées par un mode de vie sain, avec des ingrédients frais et de qualité, mais préparés rapidement dans une cuisine à aire ouverte.
+                                        Les recettes sont réinterprétées.
+                                        Ils sont soigneusement collectés, testés et mis en œuvre par le chef <lang xml:lang="it-IT">Mario Guglielmi</lang>.
+                                        <break time="1s"/>
+                                        Le restaurant est situé au numéro 6 de la rue Diaconu Coresi et est ouvert tous les jours de 12 h 00 à 22 h 00.
+                                        <break time="1s"/>
+                                        En guise de recommandation... essayer <lang xml:lang="it-IT">Gnocchi Quattro Formaggi</lang>.
+                                   </amazon:emotion>`,
             DRACULAS_INTEREST_MSG: `<amazon:emotion name="excited" intensity="medium">
                                         <audio src="soundbank://soundlibrary/monsters/pigmy_bats/pigmy_bats_04"/>
                                         <break time="500ms"/>
@@ -390,7 +475,7 @@ module.exports = {
             MISSING_MSG: `On dirait que tu ne m'as pas encore dit ton prénom. `,
             HELP_MSG: 'Je peux vous aider à vous amuser dans la ville de Brasov. Avez-vous faim ou voulez-vous visiter la ville? ',
             REPROMPT_MSG: `Si vous ne savez pas quoi faire ensuite, essayez de demander de l'aide. `,
-            GOODBYE_MSG: 'Au revoir, {{name}}! ',
+            GOODBYE_MSG: 'Au revoir {{name}}! ',
             REFLECTOR_MSG: 'Vous venez de déclencher {{intent}}. ',
             FALLBACK_MSG: `<amazon:emotion name="disappointed" intensity="high">
                                 Désolé, je ne sais pas à ce sujet. Veuillez réessayer.
