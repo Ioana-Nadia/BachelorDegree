@@ -30,7 +30,7 @@ const LaunchRequestHandler = {
     handle(handlerInput) {
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const name = sessionAttributes['name'];
-        const dataAvailability = name && true;
+        const dataAvailability = name;
         let outputSpeech = "";
 
         if (dataAvailability)
@@ -53,11 +53,8 @@ const LaunchRequestHandler = {
 
 const RegisterNameIntentHandler = {
     canHandle(handlerInput) {
-        //const {attributesManager, requestEnvelope} = handlerInput;
-       // const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'RegisterNameIntent';
-           // && !firstName;
     },
     handle(handlerInput) {
         const {attributesManager, requestEnvelope} = handlerInput;
@@ -80,11 +77,8 @@ const RegisterNameIntentHandler = {
 
 const ChooseAttractionIntentHandler = {
     canHandle(handlerInput) {
-        //const {attributesManager, requestEnvelope} = handlerInput;
-       // const firstName = Alexa.getSlotValue(requestEnvelope, 'name');
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ChooseAttractionIntent';
-           // && !firstName;
     },
     handle(handlerInput) {
         const {attributesManager, requestEnvelope} = handlerInput;
@@ -141,7 +135,7 @@ const VisitCityIntentHandler = {
         const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
         const firstName = sessionAttributes['name'];
         const counter = sessionAttributes['sessionCounter']; 
-        const dataAvailability = firstName && true;
+        const dataAvailability = firstName;
         
         if(dataAvailability) {
             if(counter > 1) {
@@ -373,7 +367,7 @@ const CancelAndStopIntentHandler = {
     }
 };
 /* *
- * FallbackIntent triggers when a customer says something that doesn’t map to any intents in your skill
+ * FallbackIntent triggers when a customer says something that doesn’t map to any intents in the skill
  * It must also be defined in the language model (if the locale supports it)
  * This handler can be safely added but will be ingnored in locales that do not support it yet 
  * */
@@ -407,8 +401,7 @@ const SessionEndedRequestHandler = {
 };
 /* *
  * The intent reflector is used for interaction model testing and debugging.
- * It will simply repeat the intent the user said. You can create custom handlers for your intents 
- * by defining them above, then also adding them to the request handler chain below 
+ * It will simply repeat the intent the user said.
  * */
 const IntentReflectorHandler = {
     canHandle(handlerInput) {
@@ -420,14 +413,11 @@ const IntentReflectorHandler = {
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
             .getResponse();
     }
 };
-/**
- * Generic error handling to capture any syntax or routing errors. If you receive an error
- * stating the request handler chain is not found, you have not implemented a handler for
- * the intent being invoked or included it in the skill builder below 
+/* *
+ * Generic error handling to capture any syntax or routing errors.
  * */
 const ErrorHandler = {
     canHandle() {
@@ -451,9 +441,9 @@ const SaveAttributesResponseInterceptor = {
         const sessionAttributes = attributesManager.getSessionAttributes();
         const shouldEndSession = (typeof response.shouldEndSession === "undefined" ? true : response.shouldEndSession); //is this a session end?
         if (shouldEndSession || Alexa.getRequestType(requestEnvelope) === 'SessionEndedRequest') { // skill was stopped or timed out
-            // we increment a persistent session counter here
+            // increment a persistent session counter here
             sessionAttributes['sessionCounter'] = sessionAttributes['sessionCounter'] ? sessionAttributes['sessionCounter'] + 1 : 1;
-            // we make ALL session attributes persistent
+            // make ALL session attributes persistent
             console.log('Saving to persistent storage:' + JSON.stringify(sessionAttributes));
             attributesManager.setPersistentAttributes(sessionAttributes);
             await attributesManager.savePersistentAttributes();
@@ -497,7 +487,7 @@ const LoggingRequestInterceptor = {
 };
 
 /**
- * This handler acts as the entry point for your skill, routing all request and response
+ * This handler acts as the entry point for the skill, routing all request and response
  * payloads to the handlers above. Make sure any new handlers or interceptors you've
  * defined are included below. The order matters - they're processed top to bottom 
  * */
